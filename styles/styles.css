@@ -1,0 +1,107 @@
+.card-wrapper {
+  display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   position: relative;
+   background-color: white;
+}
+.card {
+ -moz-border-radius: 10px;
+ -webkit-border-radius: 10px;
+ border-radius: 10px;
+ height: 150px;
+
+}
+.card-big {
+ margin: 10px;
+ padding: 10px;
+ flex: 2 1 300px;
+}
+
+.card-small {
+ margin: 10px;
+ padding: 10px;
+ flex: 1 1 150px;
+}
+
+.content-wrapper-small {
+ display: flex;
+ flex-flow: row wrap
+}
+
+.content-wrapper-big {
+ display: flex;
+ height: 100%;
+ flex-flow: row nowrap;
+ justify-content: space-around; 
+}
+
+.info-wrapper {
+ width: 50%;
+}
+
+.icon-big {
+ width: 50%;
+}
+
+.icon-small {
+ width: 100%;
+}
+
+
+.icon-small > img {
+ display: block;
+ margin: 0 auto;
+ width: 75px;
+ height: 75px;
+ 
+}
+
+.icon-big > img {
+ height: 100%;
+ display: block;
+ margin: 0 auto;
+}
+
+.head {
+ padding: 0;
+ font-size: 14px;
+ margin-top: 5px;
+ white-space: nowrap;
+}
+.counter {
+ font-size: 18px;
+ font-weight: bold;
+}
+
+.head, .counter {
+ width: 100%;
+ text-align: center;
+ color: #333;;
+}
+
+#source-wrapper {
+ margin: 15px;
+}
+
+#source-header {
+ cursor: pointer;
+ cursor: hand;
+}
+
+#sources {
+  display: none;
+}
+
+#sources-list {
+ font-size: 10px;
+ padding: 0;
+ list-style-type: none;
+}
+
+#sources-list > li {
+ margin: 0;
+}
