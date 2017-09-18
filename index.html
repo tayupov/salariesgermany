@@ -9,7 +9,7 @@
     <div class="container">
     <div class="card-wrapper">
 
-            <div class="card card-small" style="border-color: #555" data-toggle="tooltip" data-placement="top" title="Hover text lol!">
+            <div class="card card-small" style="border-color: #555" data-toggle="tooltip" title="[1] Der gesetzliche Mindestlohn in Deutschland liegt bei 8.84€/Std.">
                 <div class="content-wrapper-small">
                     <div class="icon icon-small">
                         <img src="https://i.imgur.com/TwNsWx7.png" />
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="card card-small" style="border-color: #555">
+            <div class="card card-small" style="border-color: #555" data-toggle="tooltip" title="[2] Ein Fabrikarbeiter in Vietnam verdient 200€/Monat">
                 <div class="content-wrapper-small">
                     <div class="icon icon-small">
                         <img src="https://i.imgur.com/ZYl3Xca.png" />
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="card card-big" style="border-color: #555">
+            <div class="card card-big" style="border-color: #555" data-toggle="tooltip" title="Im Vergleich: [3] Das Gehalt von Bundeskanzlerin Angela Merkel und die [4] Rente von Martin Winterkorn (VW)">
                 <div class="content-wrapper-big">
                     <div class="icon icon-big">
                         <img src="https://i.imgur.com/3s7o1HB.jpg" />
@@ -60,7 +60,7 @@
             </div>
 
 
-            <div class="card card-big" style="border-color: #555">
+            <div class="card card-big" style="border-color: #555" data-toggle="tooltip" title="[5] Cristiano Ronaldo verdient 227 Mio. € im Jahr. [6] Der Hartz4 Regelsatz beläuft sich auf 4908€ im Jahr.">
                 <div class="content-wrapper-big">
                     <div class="icon icon-big">
                         <img src="https://i.imgur.com/3s7o1HB.jpg" />
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="card card-small" style="border-color: #555">
+            <div class="card card-small" style="border-color: #555" data-toggle="tooltip" title="[7] Ein Pilot bei der Lufthansa verdient 225000 € im Jahr.">
                 <div class="content-wrapper-small">
                     <div class="icon icon-small">
                         <img src="https://i.imgur.com/3s7o1HB.jpg" />
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="card card-small" style="border-color: #555">
+            <div class="card card-small" style="border-color: #555" data-toggle="tooltip" title="[8] Der Vorstandsvorsitzende der Allianz verdient 6,2 Mio € im Jahr.">
                 <div class="content-wrapper-small">
                     <div class="icon icon-small">
                         <img src="https://i.imgur.com/CKdKDYT.png" />
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="card card-big" style="border-color: #555">
+            <div class="card card-big" style="border-color: #555" data-toggle="tooltip" title="[9] Eine Krankenschwester verdient in Deutschland 2876 € im Monat. [10] Ein Maurergehalt liegt bei rund 2700€ im Monat">
                 <div class="content-wrapper-big">
                     <div class="icon icon-big">
                         <img src="https://i.imgur.com/3s7o1HB.jpg" />
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="card card-big" style="border-color: #555">
+            <div class="card card-big" style="border-color: #555" data-toggle="tooltip" title="[11] Christian Wulffs Ehrensold beläuft sich auf 240000 € im Jahr. [12] Ein Lehrergehalt beträgt rund 57281€ im Jahr.">
                 <div class="content-wrapper-big">
                     <div class="icon icon-big">
                         <img src="https://i.imgur.com/3s7o1HB.jpg" />
@@ -177,8 +177,12 @@
         </div>
     </div>
     </div><!-- Container -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript">
         (function() {
+            $('[data-toggle="tooltip"]').tooltip()
             var counters = document.getElementsByClassName('incr');
             var items = []
             for (var i = 0; i < counters.length; i++) {
@@ -196,7 +200,6 @@
                 items.forEach(function(item) {
                     var curr = +item.item.innerHTML;
                     var newValue = curr + item.value / 10;
-                    console.log(curr)
                     item.item.innerHTML = item.value < 1 ? newValue.toFixed(item.decimals) : Math.ceil(newValue);
                 }); 
             }, 100);
